@@ -1,11 +1,13 @@
 import React from 'react';
 import Feature from './Feature';
 import './Listing.css';
+import { motion } from 'framer-motion';
 
 
-export default function Listing({ data }) {
+export default function Listing({ data, open }) {
+
    return (
-      <div className='listing'>
+      <motion.div className='listing' onClick={open} whileHover={{ scale: 1.1 }}>
          <div className='listing_content'>
             <div className='listing_image-container'>
                <img className='listing_image'
@@ -28,6 +30,6 @@ export default function Listing({ data }) {
                </div>
             </div>
          </div>
-      </div>
+      </motion.div>
    )
 };
