@@ -7,7 +7,11 @@ import { motion } from 'framer-motion';
 export default function Listing({ data, open }) {
 
    return (
-      <motion.div className='listing' onClick={open} whileHover={{ scale: 1.1 }}>
+      <motion.div
+         className='listing'
+         onClick={open}
+         whileHover={{ scale: 1.1 }}
+      >
          <div className='listing_content'>
             <div className='listing_image-container'>
                <img className='listing_image'
